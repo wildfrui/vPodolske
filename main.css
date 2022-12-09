@@ -1,13 +1,16 @@
 /* page */
 
 .page {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+  max-height: 100%;
 }
 
-.container {
+._container {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -15,15 +18,20 @@
 }
 
 /* header */
+.header {
+  padding: 30px;
+}
+.header_solid {
+  background-color: silver;
+}
 .header__container {
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  width: 100%;
   font-family: "Oswald", sans-serif;
-  background-color: silver;
 }
 
 /* menu */
@@ -32,19 +40,18 @@
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  background-color: pink;
+  font-family: "Oswald", sans-serif;
 }
 
-.header__menu {
-}
-
-.menu__link {
-  text-decoration: none;
+.link {
   padding: 10px;
+  text-decoration: none;
   transition: color ease 0.6s;
 }
-
-.menu__link:hover {
+.link_white {
+  color: #fff;
+}
+.link:hover {
   color: #fff;
   background-color: black;
 }
@@ -52,23 +59,33 @@
 /* logo */
 
 .logo {
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
-  font-size: 57px;
   text-decoration: none;
   color: #000;
 }
 
 .header__logo {
+  font-size: 57px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.intro__logo {
+  font-size: 120px;
+}
+
 /* support */
 
 .support {
   text-decoration: none;
+}
+.support_white {
+  color: #fff;
+}
+.support_black {
   color: #000;
 }
 .header__support {
@@ -79,7 +96,12 @@
 .main {
   flex: 1;
 }
-
+.intro__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 /* content */
 
 .content {
@@ -141,9 +163,11 @@
   background-color: #000;
   z-index: 0;
   opacity: 0.45;
-  transition: opacity ease 0.5s;
+  transition: opacity ease 0.5s, left 0.5s ease, top 0.5s ease;
 }
 .card:hover .card__layer {
+  top: 10px;
+  left: 10px;
   opacity: 0.8;
 }
 
@@ -159,25 +183,164 @@
   max-width: 1100px;
 }
 
+/* text */
+
+.text {
+  font-family: "Oswald", sans-serif;
+}
+.intro__text {
+  text-align: center;
+  max-width: 700px;
+  color: white;
+  font-size: 30px;
+}
 /* footer */
 
 .footer {
 }
 
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+.footer__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 26px;
+}
+.footer__icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__icons a:not(:last-child) {
+  margin-right: 20px;
+}
+.footer__icons img {
+  max-width: 40px;
+}
+
+/* video */
+
+.video__container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+/* media */
+
 @media (max-width: 1100px) {
   .header__logo {
-    top: 90%;
+    top: 80px;
     font-size: 47px;
+  }
+  .card__title {
+    font-size: 26px;
+  }
+  .title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .stories__title {
+    margin-top: 50px;
+  }
+  .card__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 780px) {
+  .title {
+    font-size: 26px;
+  }
+  .stories__title {
+    margin-top: 50px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card__title {
+    font-size: 36px;
+  }
+  .card__text {
+    font-size: 14px;
   }
 }
 @media (max-width: 600px) {
+  .stories__header {
+    background-color: transparent;
+  }
   .header__menu {
     margin: 0 auto;
+    font-size: 16px;
   }
   .header__logo {
+    top: 85px;
   }
   .header__support {
     display: none;
+  }
+  .stories__title {
+    margin-top: 70px;
+  }
+  .card__title {
+    position: absolute;
+    font-size: 26px;
+    top: 0px;
+    left: 0;
+  }
+  .footer__container {
+    height: 60px;
+  }
+  .footer__title {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    padding-top: 10px;
+  }
+  .menu {
+    width: 100%;
+  }
+  .header__menu {
+    font-size: 14px;
+  }
+  .header__logo {
+    top: 70px;
+    font-size: 30px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .stories__title {
+    margin-top: 30px;
+  }
+  .card__title {
+    position: absolute;
+    font-size: 16px;
+    top: 0px;
+    left: 0;
   }
 }
 /* @media (max-width: 1100px) {
