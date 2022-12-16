@@ -1,7 +1,8 @@
 import React from "react";
+import Header from "./components/Header";
 
 const App = () => {
-  return "hi";
+  return <Header></Header>;
 };
 
 export default App;

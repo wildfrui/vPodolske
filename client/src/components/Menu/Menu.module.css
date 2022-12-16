@@ -1,0 +1,12 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.link {
+  padding: 10px;
+  text-decoration: none;
+  transition: color ease 0.6s;
+}

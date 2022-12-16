@@ -1,0 +1,12 @@
+.header {
+  padding: 30px;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+}
