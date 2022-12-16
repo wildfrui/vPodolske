@@ -1,0 +1,13 @@
+.title {
+  font-family: "Playfair Display", serif;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.stories {
+  font-size: 60px;
+  text-align: left;
+  width: 100%;
+  max-width: 1100px;
+}
