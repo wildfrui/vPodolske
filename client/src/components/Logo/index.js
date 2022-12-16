@@ -7,7 +7,7 @@ import styles from "./Logo.module.css";
 const Logo = ({ component }) => {
   return (
     <a className={classnames(styles.logo, styles[component])} href="/">
-      вПОДОЛЬСК
+      вПОДОЛЬСКE
     </a>
   );
 };
