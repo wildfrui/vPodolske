@@ -19,9 +19,6 @@ const Menu = () => {
           ПРОЕКТ
         </a>
       </div>
-      <a className={classnames(styles.link)} href="/">
-        вПОДОЛЬСК
-      </a>
     </>
   );
 };

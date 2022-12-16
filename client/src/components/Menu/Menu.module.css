@@ -10,3 +10,8 @@
   text-decoration: none;
   transition: color ease 0.6s;
 }
+
+.link:hover {
+  color: #fff;
+  background-color: black;
+}

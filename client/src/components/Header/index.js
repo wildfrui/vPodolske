@@ -1,22 +1,24 @@
 import React from "react";
 import classnames from "classnames";
+import combCn from "../../utils/combCn";
 
 import Menu from "../Menu";
+import Logo from "../Logo";
+import Support from "../Support";
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header = ({ solid }) => {
   return (
     <>
-      <header className={classnames(styles.header)}>
+      <header
+        className={classnames(styles.header, {
+          [styles.header_solid]: solid,
+        })}
+      >
         <div className={classnames(styles.container)}>
           <Menu></Menu>
-          <a
-            class="support support_black header__support"
-            href="https://github.com/wildfrui/LandingPodolsk"
-            target="_blank"
-          >
-            Поддержать проект
-          </a>
+          <Logo component="header"></Logo>
+          <Support></Support>
         </div>
       </header>
     </>

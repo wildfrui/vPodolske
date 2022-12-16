@@ -1,6 +1,10 @@
 .header {
   padding: 30px;
 }
+.header_solid {
+  background-color: silver;
+}
+
 .container {
   position: relative;
   display: flex;
