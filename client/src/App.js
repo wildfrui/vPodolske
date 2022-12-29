@@ -4,8 +4,9 @@ import MainSection from "./components/MainSection";
 import Title from "./components/Title";
 import Cards from "./components/Cards";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 import "./css/normalize.css";
-
+import Contacts from "./components/Contacts";
 const App = () => {
   return (
     <>
@@ -60,6 +61,9 @@ const App = () => {
           ></Card>
         </Cards>
       </MainSection>
+      <Footer>
+        <Contacts></Contacts>
+      </Footer>
     </>
   );
 };

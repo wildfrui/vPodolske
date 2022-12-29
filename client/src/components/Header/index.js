@@ -1,6 +1,5 @@
 import React from "react";
 import classnames from "classnames";
-import combCn from "../../utils/combCn";
 
 import Menu from "../Menu";
 import Logo from "../Logo";
