@@ -16,9 +16,21 @@
   background-color: black;
 }
 
+.header {
+}
+
 @media (max-width: 600px) {
   .menu {
     margin: 0 auto;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu {
+    width: 100%;
+  }
+  .header {
+    font-size: 14px;
   }
 }

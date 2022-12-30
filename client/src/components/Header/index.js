@@ -6,7 +6,7 @@ import Logo from "../Logo";
 import Support from "../Support";
 import styles from "./Header.module.css";
 
-const Header = ({ solid }) => {
+const Header = ({ children, solid }) => {
   return (
     <>
       <header
@@ -14,11 +14,7 @@ const Header = ({ solid }) => {
           [styles.header_solid]: solid,
         })}
       >
-        <div className={classnames(styles.container)}>
-          <Menu></Menu>
-          <Logo component="header"></Logo>
-          <Support></Support>
-        </div>
+        <div className={classnames(styles.container)}>{children}</div>
       </header>
     </>
   );

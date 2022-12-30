@@ -13,15 +13,29 @@
   transform: translate(-50%, -50%);
 }
 
+.home {
+  font-size: 120px;
+}
+
 @media (max-width: 1100px) {
   .logo {
     top: 80px;
-    font-size: 47px;
+    font-size: 67px;
   }
 }
 
 @media (max-width: 600px) {
   .logo {
     top: 85px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    top: 70px;
+    font-size: 30px;
+  }
+  .home {
+    font-size: 40px;
   }
 }

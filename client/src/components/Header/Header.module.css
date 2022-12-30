@@ -21,3 +21,9 @@
     background: transparent;
   }
 }
+
+@media (max-width: 400px) {
+  .header {
+    padding-top: 10px;
+  }
+}

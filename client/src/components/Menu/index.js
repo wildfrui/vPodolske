@@ -2,10 +2,10 @@ import React from "react";
 import classnames from "classnames";
 import styles from "./Menu.module.css";
 
-const Menu = () => {
+const Menu = ({ mix }) => {
   return (
     <>
-      <div className={classnames(styles.menu)}>
+      <div className={classnames(styles.menu, styles[mix])}>
         <a className={classnames(styles.link)} href="">
           ИСТОРИИ
         </a>
