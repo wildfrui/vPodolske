@@ -1,20 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Stories from "./pages/Stories";
 
 import "./css/normalize.css";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home></Home>,
+  },
+  {
+    path: "/stories",
+    element: <Stories></Stories>,
+  },
+]);
+
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/stories" element={<Stories />}></Route>
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router}></RouterProvider>;
 };
 
 export default App;

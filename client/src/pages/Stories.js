@@ -11,12 +11,64 @@ import Support from "../components/Support";
 import Logo from "../components/Logo";
 import Page from "../components/Page";
 
+const links = [
+  { name: "ИСТОРИИ", href: "/stories" },
+  { name: "СОБЫТИЯ", href: "/events" },
+  { name: "КАРТА", href: "/map" },
+  { name: "ПРОЕКТ", href: "/about" },
+];
+
+const stories = [
+  {
+    title: "Новостройки Подольска",
+    text: "Как за несколько лет поменялся ландшафт города",
+    image: "url(/images/newhouse.jpeg)",
+    id: "1",
+    component: "content",
+  },
+  {
+    title: "Новостройки Подольска",
+    text: "Как за несколько лет поменялся ландшафт города",
+    image: "url(/images/newhouse.jpeg)",
+    id: "2",
+    component: "content",
+  },
+  {
+    title: "Новостройки Подольска",
+    text: "Как за несколько лет поменялся ландшафт города",
+    image: "url(/images/newhouse.jpeg)",
+    id: "3",
+    component: "content",
+  },
+  {
+    title: "Новостройки Подольска",
+    text: "Как за несколько лет поменялся ландшафт города",
+    image: "url(/images/newhouse.jpeg)",
+    id: "4",
+    component: "content",
+  },
+  {
+    title: "Новостройки Подольска",
+    text: "Как за несколько лет поменялся ландшафт города",
+    image: "url(/images/newhouse.jpeg)",
+    id: "5",
+    component: "content",
+  },
+  {
+    title: "Новостройки Подольска",
+    text: "Как за несколько лет поменялся ландшафт города",
+    image: "url(/images/newhouse.jpeg)",
+    id: "6",
+    component: "content",
+  },
+];
+
 const Stories = () => {
   return (
     <>
       <Page>
         <Header solid>
-          <Menu mix="header"></Menu>
+          <Menu mix="header" links={links}></Menu>
           <Logo component="header"></Logo>
           <Support></Support>
         </Header>
@@ -25,50 +77,7 @@ const Stories = () => {
             text="Истории, рассказанные городом и пропитанные историей в 241 год"
             page="stories"
           ></Title>
-          <Cards>
-            <Card
-              title="Новостройки Подольска"
-              text="Как за несколько лет поменялся ландшафт города"
-              image="url(/images/newhouse.jpeg)"
-              link="/https://doka.guide/css/adding-styles/"
-              component="content"
-            ></Card>
-            <Card
-              title="Новостройки Подольска"
-              text="Как за несколько лет поменялся ландшафт города"
-              image="url(/images/newhouse.jpeg)"
-              link="/https://doka.guide/css/adding-styles/"
-              component="content"
-            ></Card>
-            <Card
-              title="Новостройки Подольска"
-              text="Как за несколько лет поменялся ландшафт города"
-              image="url(/images/newhouse.jpeg)"
-              link="/https://doka.guide/css/adding-styles/"
-              component="content"
-            ></Card>
-            <Card
-              title="Новостройки Подольска"
-              text="Как за несколько лет поменялся ландшафт города"
-              image="url(/images/newhouse.jpeg)"
-              link="/https://doka.guide/css/adding-styles/"
-              component="content"
-            ></Card>
-            <Card
-              title="Новостройки Подольска"
-              text="Как за несколько лет поменялся ландшафт города"
-              image="url(/images/newhouse.jpeg)"
-              link="/https://doka.guide/css/adding-styles/"
-              component="content"
-            ></Card>
-            <Card
-              title="Новостройки Подольска"
-              text="Как за несколько лет поменялся ландшафт города"
-              image="url(/images/newhouse.jpeg)"
-              link="/https://doka.guide/css/adding-styles/"
-              component="content"
-            ></Card>
-          </Cards>
+          <Cards cards={stories}></Cards>
         </MainSection>
         <Footer>
           <Contacts></Contacts>

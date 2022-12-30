@@ -11,12 +11,19 @@ import Support from "../../components/Support";
 import styles from "./Home.module.css";
 import classNames from "classnames";
 
+const links = [
+  { name: "ИСТОРИИ", href: "/stories" },
+  { name: "СОБЫТИЯ", href: "/events" },
+  { name: "КАРТА", href: "/map" },
+  { name: "ПРОЕКТ", href: "/about" },
+];
+
 const Home = () => {
   return (
     <>
       <Page>
         <Header>
-          <Menu mix="header"></Menu>
+          <Menu mix="header" links={links}></Menu>
           <Support></Support>
         </Header>
         <MainSection page="home">
